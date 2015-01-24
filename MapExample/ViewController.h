@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "MapViewAnnotation.h"
+
 
 @interface ViewController : UIViewController <UISearchBarDelegate, MKMapViewDelegate>
 
