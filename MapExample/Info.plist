@@ -38,5 +38,18 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This is my example application</string>
+	<key>FacebookAppID</key>
+	<string>947353155299553</string>
+	<key>FacebookDisplayName</key>
+	<string> Maps and Places</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb947353155299553</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

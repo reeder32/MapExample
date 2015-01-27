@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27A97C011A6DF2ED00C927C8"
-               BuildableName = "MapExample.app"
-               BlueprintName = "MapExample"
-               ReferencedContainer = "container:MapExample.xcodeproj">
+               BuildableName = "MapsandPlaces.app"
+               BlueprintName = "MapsandPlaces"
+               ReferencedContainer = "container:MapsandPlaces.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27A97C1A1A6DF2F000C927C8"
-               BuildableName = "MapExampleTests.xctest"
-               BlueprintName = "MapExampleTests"
-               ReferencedContainer = "container:MapExample.xcodeproj">
+               BuildableName = "MapsandPlacesTests.xctest"
+               BlueprintName = "MapsandPlacesTests"
+               ReferencedContainer = "container:MapsandPlaces.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27A97C1A1A6DF2F000C927C8"
-               BuildableName = "MapExampleTests.xctest"
-               BlueprintName = "MapExampleTests"
-               ReferencedContainer = "container:MapExample.xcodeproj">
+               BuildableName = "MapsandPlacesTests.xctest"
+               BlueprintName = "MapsandPlacesTests"
+               ReferencedContainer = "container:MapsandPlaces.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27A97C011A6DF2ED00C927C8"
-            BuildableName = "MapExample.app"
-            BlueprintName = "MapExample"
-            ReferencedContainer = "container:MapExample.xcodeproj">
+            BuildableName = "MapsandPlaces.app"
+            BlueprintName = "MapsandPlaces"
+            ReferencedContainer = "container:MapsandPlaces.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27A97C011A6DF2ED00C927C8"
-            BuildableName = "MapExample.app"
-            BlueprintName = "MapExample"
-            ReferencedContainer = "container:MapExample.xcodeproj">
+            BuildableName = "MapsandPlaces.app"
+            BlueprintName = "MapsandPlaces"
+            ReferencedContainer = "container:MapsandPlaces.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27A97C011A6DF2ED00C927C8"
-            BuildableName = "MapExample.app"
-            BlueprintName = "MapExample"
-            ReferencedContainer = "container:MapExample.xcodeproj">
+            BuildableName = "MapsandPlaces.app"
+            BlueprintName = "MapsandPlaces"
+            ReferencedContainer = "container:MapsandPlaces.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

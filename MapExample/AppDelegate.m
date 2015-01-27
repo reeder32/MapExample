@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +21,22 @@
     self.locationManager = [[LocationManager alloc]init];
     return YES;
 }
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    BOOL urlWasHandled = [FBAppCall handleOpenURL:url
+                                sourceApplication:sourceApplication
+                                  fallbackHandler:^(FBAppCall *call) {
+                                      NSLog(@"Unhandled deep link: %@", url);
+                                      // Here goes the code to handle the links
+                                      // Use the links to show a relevant view of your app to the user
+                                  }];
+    
+    return urlWasHandled;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

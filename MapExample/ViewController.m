@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PlaceDetailViewController.h"
 
 @interface ViewController ()
 
@@ -68,6 +69,8 @@
                 
                 NSString *name = [places objectForKey:@"name"];
                 
+                NSString *googlePlacesID = [places objectForKey:@"place_id"];
+                
                 NSDictionary *geometry = [places objectForKey:@"geometry"];
                 
                 NSDictionary *location = [geometry objectForKey:@"location"];
@@ -78,7 +81,7 @@
                 
                 CLLocationCoordinate2D latlng = CLLocationCoordinate2DMake(lat.doubleValue, lng.doubleValue);
                 
-                MapViewAnnotation *annotation = [[MapViewAnnotation alloc]initWithTitle:name andCoordinate:latlng];
+                MapViewAnnotation *annotation = [[MapViewAnnotation alloc]initWithTitle:name andCoordinate:latlng andGooglePlacesID:googlePlacesID];
                 
                 [placesFound addObject:annotation];
                 
@@ -94,8 +97,88 @@
     }] resume];
     
     
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    static NSString *identifier = @"MyLocation";
     
+    if ([annotation isKindOfClass:[MapViewAnnotation class]]) {
+        
+        MKAnnotationView *aView = (MKAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        
+        if (aView == nil) {
+            aView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+            
+            aView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeInfoDark];
+            aView.canShowCallout = YES;
+            aView.annotation = annotation;
+        } else {
+            aView.annotation = annotation;
+        }
+        
+        return aView;
+        
+    } else {
+        return nil;
+    }
+}
+
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     
+    MapViewAnnotation *annotation = view.annotation;
+    
+    [self getPlaceDetailWithID:annotation.googlePlacesID];
+    
+}
+
+-(void)getPlaceDetailWithID:(NSString *)placeID {
+    
+    NSString *urlStr = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/details/json?placeid=%@&key=AIzaSyDfFhd0Uh5fvOw1daGh9zbVPbAVirn2qDU", placeID];
+    NSURL  *url = [NSURL URLWithString:urlStr];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        NSError *jsonError;
+        
+        NSMutableDictionary *allData = [NSJSONSerialization
+                                        JSONObjectWithData:data
+                                        options:NSJSONReadingMutableContainers
+                                        error:&jsonError];
+        
+        NSDictionary *result = [allData objectForKey:@"result"];
+        
+        [self performSelectorOnMainThread:@selector(showPlaceDetail:) withObject:result waitUntilDone:NO];
+        
+        
+        
+    }] resume];
+    
+}
+
+-(void)showPlaceDetail:(NSDictionary *)result {
+    
+    [self performSegueWithIdentifier:@"showPlaceDetail" sender:result];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"showPlaceDetail"]) {
+        NSDictionary *result = (NSDictionary *)sender;
+        
+        NSString *websiteLink = [result objectForKey:@"website"];
+        
+        NSString *name = [result objectForKey:@"name"];
+        
+        PlaceDetailViewController *pdc = segue.destinationViewController;
+        
+        pdc.urlString = websiteLink;
+        
+        pdc.title = name;
+    }
 }
 
 -(void)displayNewAnnotations:(NSMutableArray *)places {

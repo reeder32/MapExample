@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273CF5861A772E6200560024 /* PlaceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 273CF5851A772E6200560024 /* PlaceDetailViewController.m */; };
+		273CF58D1A77467700560024 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 273CF58C1A77467700560024 /* facebook.png */; };
+		273CF5911A774CBC00560024 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273CF5901A774CBB00560024 /* FacebookSDK.framework */; };
 		27A97C081A6DF2EE00C927C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A97C071A6DF2EE00C927C8 /* main.m */; };
 		27A97C0B1A6DF2EE00C927C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A97C0A1A6DF2EE00C927C8 /* AppDelegate.m */; };
 		27A97C0E1A6DF2EE00C927C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A97C0D1A6DF2EE00C927C8 /* ViewController.m */; };
 		27A97C111A6DF2EF00C927C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A97C0F1A6DF2EF00C927C8 /* Main.storyboard */; };
 		27A97C131A6DF2EF00C927C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A97C121A6DF2EF00C927C8 /* Images.xcassets */; };
 		27A97C161A6DF2EF00C927C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A97C141A6DF2EF00C927C8 /* LaunchScreen.xib */; };
-		27A97C221A6DF2F000C927C8 /* MapExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A97C211A6DF2F000C927C8 /* MapExampleTests.m */; };
+		27A97C221A6DF2F000C927C8 /* MapsandPlaces.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A97C211A6DF2F000C927C8 /* MapsandPlaces.m */; };
 		27A97C2C1A6DF31000C927C8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A97C2B1A6DF31000C927C8 /* MapKit.framework */; };
 		27A97C2E1A6DFE4300C927C8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A97C2D1A6DFE4300C927C8 /* CoreLocation.framework */; };
 		27A97C311A6DFE7600C927C8 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A97C301A6DFE7600C927C8 /* LocationManager.m */; };
@@ -32,7 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		27A97C021A6DF2EE00C927C8 /* MapExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		273CF5841A772E6200560024 /* PlaceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceDetailViewController.h; sourceTree = "<group>"; };
+		273CF5851A772E6200560024 /* PlaceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDetailViewController.m; sourceTree = "<group>"; };
+		273CF58C1A77467700560024 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		273CF58E1A774BC800560024 /* facebook-ios-sdk-3.22.pkg */ = {isa = PBXFileReference; lastKnownFileType = file; name = "facebook-ios-sdk-3.22.pkg"; path = "../../../Downloads/facebook-ios-sdk-3.22.pkg"; sourceTree = "<group>"; };
+		273CF5901A774CBB00560024 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		27A97C021A6DF2EE00C927C8 /* MapsandPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapsandPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A97C061A6DF2EE00C927C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27A97C071A6DF2EE00C927C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27A97C091A6DF2EE00C927C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,9 +50,9 @@
 		27A97C101A6DF2EF00C927C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27A97C121A6DF2EF00C927C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27A97C151A6DF2EF00C927C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		27A97C1B1A6DF2F000C927C8 /* MapExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A97C1B1A6DF2F000C927C8 /* MapsandPlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapsandPlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A97C201A6DF2F000C927C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27A97C211A6DF2F000C927C8 /* MapExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapExampleTests.m; sourceTree = "<group>"; };
+		27A97C211A6DF2F000C927C8 /* MapsandPlaces.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapsandPlaces.m; sourceTree = "<group>"; };
 		27A97C2B1A6DF31000C927C8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		27A97C2D1A6DFE4300C927C8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		27A97C2F1A6DFE7600C927C8 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationManager.h; path = ../LocationManager.h; sourceTree = "<group>"; };
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273CF5911A774CBC00560024 /* FacebookSDK.framework in Frameworks */,
 				27A97C2E1A6DFE4300C927C8 /* CoreLocation.framework in Frameworks */,
 				27A97C2C1A6DF31000C927C8 /* MapKit.framework in Frameworks */,
 			);
@@ -75,13 +84,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		273CF5891A7733FA00560024 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				273CF58C1A77467700560024 /* facebook.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		27A97BF91A6DF2EC00C927C8 = {
 			isa = PBXGroup;
 			children = (
+				273CF5901A774CBB00560024 /* FacebookSDK.framework */,
+				273CF58E1A774BC800560024 /* facebook-ios-sdk-3.22.pkg */,
 				27A97C2D1A6DFE4300C927C8 /* CoreLocation.framework */,
 				27A97C2B1A6DF31000C927C8 /* MapKit.framework */,
-				27A97C041A6DF2EE00C927C8 /* MapExample */,
-				27A97C1E1A6DF2F000C927C8 /* MapExampleTests */,
+				27A97C041A6DF2EE00C927C8 /* MapsandPlaces */,
+				27A97C1E1A6DF2F000C927C8 /* MapsandPlacesTests */,
 				27A97C031A6DF2EE00C927C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,30 +108,34 @@
 		27A97C031A6DF2EE00C927C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27A97C021A6DF2EE00C927C8 /* MapExample.app */,
-				27A97C1B1A6DF2F000C927C8 /* MapExampleTests.xctest */,
+				27A97C021A6DF2EE00C927C8 /* MapsandPlaces.app */,
+				27A97C1B1A6DF2F000C927C8 /* MapsandPlacesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		27A97C041A6DF2EE00C927C8 /* MapExample */ = {
+		27A97C041A6DF2EE00C927C8 /* MapsandPlaces */ = {
 			isa = PBXGroup;
 			children = (
 				27A97C091A6DF2EE00C927C8 /* AppDelegate.h */,
 				27A97C0A1A6DF2EE00C927C8 /* AppDelegate.m */,
 				27A97C0C1A6DF2EE00C927C8 /* ViewController.h */,
 				27A97C0D1A6DF2EE00C927C8 /* ViewController.m */,
+				273CF5841A772E6200560024 /* PlaceDetailViewController.h */,
+				273CF5851A772E6200560024 /* PlaceDetailViewController.m */,
 				27A97C0F1A6DF2EF00C927C8 /* Main.storyboard */,
 				27A97C121A6DF2EF00C927C8 /* Images.xcassets */,
 				27A97C141A6DF2EF00C927C8 /* LaunchScreen.xib */,
 				27A97C051A6DF2EE00C927C8 /* Supporting Files */,
 			);
+			name = MapsandPlaces;
 			path = MapExample;
 			sourceTree = "<group>";
 		};
 		27A97C051A6DF2EE00C927C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				273CF5891A7733FA00560024 /* Images */,
 				27A97C061A6DF2EE00C927C8 /* Info.plist */,
 				27A97C071A6DF2EE00C927C8 /* main.m */,
 				27C1888A1A72058800EDDD6E /* HTTPManager.h */,
@@ -125,12 +148,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		27A97C1E1A6DF2F000C927C8 /* MapExampleTests */ = {
+		27A97C1E1A6DF2F000C927C8 /* MapsandPlacesTests */ = {
 			isa = PBXGroup;
 			children = (
-				27A97C211A6DF2F000C927C8 /* MapExampleTests.m */,
+				27A97C211A6DF2F000C927C8 /* MapsandPlaces.m */,
 				27A97C1F1A6DF2F000C927C8 /* Supporting Files */,
 			);
+			name = MapsandPlacesTests;
 			path = MapExampleTests;
 			sourceTree = "<group>";
 		};
@@ -145,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27A97C011A6DF2ED00C927C8 /* MapExample */ = {
+		27A97C011A6DF2ED00C927C8 /* MapsandPlaces */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27A97C251A6DF2F000C927C8 /* Build configuration list for PBXNativeTarget "MapExample" */;
+			buildConfigurationList = 27A97C251A6DF2F000C927C8 /* Build configuration list for PBXNativeTarget "MapsandPlaces" */;
 			buildPhases = (
 				27A97BFE1A6DF2ED00C927C8 /* Sources */,
 				27A97BFF1A6DF2ED00C927C8 /* Frameworks */,
@@ -157,14 +181,14 @@
 			);
 			dependencies = (
 			);
-			name = MapExample;
+			name = MapsandPlaces;
 			productName = MapExample;
-			productReference = 27A97C021A6DF2EE00C927C8 /* MapExample.app */;
+			productReference = 27A97C021A6DF2EE00C927C8 /* MapsandPlaces.app */;
 			productType = "com.apple.product-type.application";
 		};
-		27A97C1A1A6DF2F000C927C8 /* MapExampleTests */ = {
+		27A97C1A1A6DF2F000C927C8 /* MapsandPlacesTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27A97C281A6DF2F000C927C8 /* Build configuration list for PBXNativeTarget "MapExampleTests" */;
+			buildConfigurationList = 27A97C281A6DF2F000C927C8 /* Build configuration list for PBXNativeTarget "MapsandPlacesTests" */;
 			buildPhases = (
 				27A97C171A6DF2F000C927C8 /* Sources */,
 				27A97C181A6DF2F000C927C8 /* Frameworks */,
@@ -175,9 +199,9 @@
 			dependencies = (
 				27A97C1D1A6DF2F000C927C8 /* PBXTargetDependency */,
 			);
-			name = MapExampleTests;
+			name = MapsandPlacesTests;
 			productName = MapExampleTests;
-			productReference = 27A97C1B1A6DF2F000C927C8 /* MapExampleTests.xctest */;
+			productReference = 27A97C1B1A6DF2F000C927C8 /* MapsandPlacesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -198,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 27A97BFD1A6DF2ED00C927C8 /* Build configuration list for PBXProject "MapExample" */;
+			buildConfigurationList = 27A97BFD1A6DF2ED00C927C8 /* Build configuration list for PBXProject "MapsandPlaces" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -211,8 +235,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27A97C011A6DF2ED00C927C8 /* MapExample */,
-				27A97C1A1A6DF2F000C927C8 /* MapExampleTests */,
+				27A97C011A6DF2ED00C927C8 /* MapsandPlaces */,
+				27A97C1A1A6DF2F000C927C8 /* MapsandPlacesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A97C111A6DF2EF00C927C8 /* Main.storyboard in Resources */,
+				273CF58D1A77467700560024 /* facebook.png in Resources */,
 				27A97C161A6DF2EF00C927C8 /* LaunchScreen.xib in Resources */,
 				27A97C131A6DF2EF00C927C8 /* Images.xcassets in Resources */,
 			);
@@ -243,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A97C311A6DFE7600C927C8 /* LocationManager.m in Sources */,
+				273CF5861A772E6200560024 /* PlaceDetailViewController.m in Sources */,
 				27A97C0E1A6DF2EE00C927C8 /* ViewController.m in Sources */,
 				27A97C0B1A6DF2EE00C927C8 /* AppDelegate.m in Sources */,
 				27C1888C1A72058900EDDD6E /* HTTPManager.m in Sources */,
@@ -255,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27A97C221A6DF2F000C927C8 /* MapExampleTests.m in Sources */,
+				27A97C221A6DF2F000C927C8 /* MapsandPlaces.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +290,7 @@
 /* Begin PBXTargetDependency section */
 		27A97C1D1A6DF2F000C927C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 27A97C011A6DF2ED00C927C8 /* MapExample */;
+			target = 27A97C011A6DF2ED00C927C8 /* MapsandPlaces */;
 			targetProxy = 27A97C1C1A6DF2F000C927C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -369,9 +395,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/NickReeder/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = MapExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MapsandPlaces;
 			};
 			name = Debug;
 		};
@@ -379,9 +409,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/NickReeder/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = MapExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MapsandPlaces;
 			};
 			name = Release;
 		};
@@ -399,8 +433,8 @@
 				);
 				INFOPLIST_FILE = MapExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapExample.app/MapExample";
+				PRODUCT_NAME = MapsandPlacesTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapsandPlaces.app/MapsandPlaces";
 			};
 			name = Debug;
 		};
@@ -414,15 +448,15 @@
 				);
 				INFOPLIST_FILE = MapExampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapExample.app/MapExample";
+				PRODUCT_NAME = MapsandPlacesTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MapsandPlaces.app/MapsandPlaces";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27A97BFD1A6DF2ED00C927C8 /* Build configuration list for PBXProject "MapExample" */ = {
+		27A97BFD1A6DF2ED00C927C8 /* Build configuration list for PBXProject "MapsandPlaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27A97C231A6DF2F000C927C8 /* Debug */,
@@ -431,7 +465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27A97C251A6DF2F000C927C8 /* Build configuration list for PBXNativeTarget "MapExample" */ = {
+		27A97C251A6DF2F000C927C8 /* Build configuration list for PBXNativeTarget "MapsandPlaces" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27A97C261A6DF2F000C927C8 /* Debug */,
@@ -440,7 +474,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27A97C281A6DF2F000C927C8 /* Build configuration list for PBXNativeTarget "MapExampleTests" */ = {
+		27A97C281A6DF2F000C927C8 /* Build configuration list for PBXNativeTarget "MapsandPlacesTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27A97C291A6DF2F000C927C8 /* Debug */,
