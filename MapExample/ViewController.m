@@ -83,6 +83,8 @@
                 
                 MapViewAnnotation *annotation = [[MapViewAnnotation alloc]initWithTitle:name andCoordinate:latlng andGooglePlacesID:googlePlacesID];
                 
+               
+                
                 [placesFound addObject:annotation];
                 
             }
@@ -101,15 +103,19 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
     static NSString *identifier = @"MyLocation";
+   
     
     if ([annotation isKindOfClass:[MapViewAnnotation class]]) {
         
         MKAnnotationView *aView = (MKAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
         
+        
+        
         if (aView == nil) {
             aView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             
-            aView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeInfoDark];
+            
+            aView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeInfoLight];
             aView.canShowCallout = YES;
             aView.annotation = annotation;
         } else {
@@ -126,6 +132,8 @@
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     
     MapViewAnnotation *annotation = view.annotation;
+    
+   
     
     [self getPlaceDetailWithID:annotation.googlePlacesID];
     

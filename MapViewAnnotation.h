@@ -17,6 +17,8 @@
 
 @property (nonatomic, copy) NSString *googlePlacesID;
 
+@property(nonatomic) BOOL animatesDrop;
+
 
 -(id) initWithTitle:(NSString *) annotationTitle andCoordinate:(CLLocationCoordinate2D)
 annotationCoordinate andGooglePlacesID: (NSString *) placesID ;

@@ -65,7 +65,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k5q-DX-ROf">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5q-DX-ROf">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
@@ -79,7 +79,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="6lw-Xu-k2A">
-                        <barButtonItem key="rightBarButtonItem" title="share" id="XWk-FD-oEq">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="XWk-FD-oEq">
                             <connections>
                                 <action selector="shareButtonPressed:" destination="BQo-0x-hgt" id="sFl-VH-ioy"/>
                             </connections>
